@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UPLOAD FILE</title>
+    <style>
+      .container,
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form method="post" action="uploadfile" enctype="multipart/form-data">
+        <label for="filename">
+          <input type="file" name="filetoupload" />
+        </label>
+        <label for="submit">
+          <input type="submit" value="UPLOAD" />
+        </label>
+      </form>
+    </div>
+  </body>
+</html>
