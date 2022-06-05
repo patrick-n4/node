@@ -1,9 +1,7 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
 const connnectDb = mongoose
-  .connect(
-    "mongodb+srv://patrick:patrick-db@mern.zyywvcu.mongodb.net/mern?retryWrites=true&w=majority"
-  )
+  .connect("mongodb://localhost/jwt")
   .then(() => {
     console.log("Database connected successfully");
   })

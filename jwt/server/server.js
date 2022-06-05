@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const PORT = process.env.PORT || 4040;
+const PORT = process.env.PORT || 7070;
 require("dotenv").config();
 const connnectDb = require("./configs/connect");
 const path = require("path");
@@ -30,4 +30,3 @@ app.use("/search", require("./routers/search"));
 app.listen(PORT, () => {
   console.log(`Server is running on localhost:${PORT}`);
 });
-        
