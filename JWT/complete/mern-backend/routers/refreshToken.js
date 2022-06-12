@@ -1,4 +1,4 @@
-const token = require("../controllers/handleRefreshToken");
+const token = require("../controllers/handleToken");
 const express = require("express");
 const router = express.Router();
 

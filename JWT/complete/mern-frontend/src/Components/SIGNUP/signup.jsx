@@ -26,7 +26,9 @@ export default function Signup() {
     event.preventDefault();
     if (newUser.password === newUser.cpassword) {
       try {
-        const userInfo = await axios.post("/create", newUser);
+        const userInfo = await axios.post("/signup", newUser, {
+          withCredentials: true
+        });
         if (userInfo.data === "email already exists") {
           setLoading(false);
           return setServerMsg(
@@ -39,8 +41,8 @@ export default function Signup() {
             "Usename already exists. Please user another username"
           );
         }
+
         localStorage.setItem("token", userInfo.data.token);
-        navigate("/login");
       } catch (error) {
         console.log(error.response.data);
       }
@@ -165,7 +167,7 @@ export default function Signup() {
             className="bg-green-500 h-[80%] w-[40%] rounded-md shadow-lg text-[1.4em] font-bold"
             onClick={() => {
               setLoading(true);
-              handleSubmit();
+              handleSubmit(event);
             }}
           >
             SIGNUP

@@ -21,7 +21,7 @@ export default function Login() {
       localStorage.setItem("token", refresh.data);
       navigate("/");
     }
-    refreshToken();
+    // refreshToken();
   }
   async function handleSubmit(event) {
     if (newUser.email == null || newUser.password == null) {
